@@ -4,7 +4,7 @@ Este repositório reúne os trabalhos dos laboratórios M2.1 e M2.2, desenvolvid
 
 ## Organização
 
-- **`lab_m2_1/`** — implementação e análise de métodos de segmentação para geração de máscaras binárias.
-- **`lab_m2_2/`** — continuidade do projeto, com operações morfológicas, rotulagem e análise de componentes conexos.
+- [`lab_m2_1/`](./lab_m2_1/) — implementação e análise de métodos de segmentação para geração de máscaras binárias.
+- [`lab_m2_2/`](./lab_m2_2/) — versão consolidada do projeto, que mantém a segmentação e acrescenta operações morfológicas, rotulagem e análise de componentes conexos.
 
-Cada laboratório inclui o código-fonte, imagens utilizadas, testes e documentação dos resultados.
+Cada laboratório inclui o código-fonte, as imagens utilizadas, os testes e a documentação de uso e dos resultados.

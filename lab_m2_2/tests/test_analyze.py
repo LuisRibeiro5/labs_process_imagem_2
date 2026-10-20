@@ -167,3 +167,33 @@ def test_invalid_connectivity_is_rejected_by_cli(tmp_path: Path):
         "6",
     )
     assert resultado.returncode != 0
+
+
+def test_cli_rejects_invalid_masks_and_analysis_parameters(tmp_path: Path):
+    caminho_colorido = tmp_path / "color.png"
+    caminho_nao_binario = tmp_path / "non_binary.png"
+    caminho_valido = tmp_path / "valid.png"
+    cv2.imwrite(str(caminho_colorido), np.zeros((5, 5, 3), dtype=np.uint8))
+    cv2.imwrite(str(caminho_nao_binario), np.array([[0, 127], [255, 0]], dtype=np.uint8))
+    cv2.imwrite(str(caminho_valido), np.zeros((5, 5), dtype=np.uint8))
+
+    casos = [
+        (tmp_path / "missing.png", []),
+        (caminho_colorido, []),
+        (caminho_nao_binario, []),
+        (caminho_valido, ["--min-area", "-1"]),
+        (caminho_valido, ["--kernel-size", "2"]),
+        (caminho_valido, ["--open-iterations", "0"]),
+    ]
+    for indice, (caminho_entrada, argumentos_extras) in enumerate(casos):
+        resultado = run_cli(
+            "--input",
+            str(caminho_entrada),
+            "--output",
+            str(tmp_path / f"invalid_{indice}"),
+            "--operation",
+            "analyze",
+            *argumentos_extras,
+        )
+        assert resultado.returncode != 0
+        assert "Erro:" in resultado.stderr

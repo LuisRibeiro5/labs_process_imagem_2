@@ -31,10 +31,39 @@ lab_m2_1/
 
 ## Ambiente
 
+Requisitos: Python 3.10 ou superior, `opencv-python-headless==5.0.0.93` (binding Python `cv2`) e NumPy `>=1.26.0`.
+
 ```bash
 cd lab_m2_1
+```
+
+Crie o ambiente virtual no Linux/macOS:
+
+```bash
 python3 -m venv .venv
+```
+
+Ou no Windows:
+
+```powershell
+py -3 -m venv .venv
+```
+
+Ative o ambiente no Linux/macOS:
+
+```bash
 source .venv/bin/activate
+```
+
+Ou no Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Com o ambiente ativado, instale as dependências:
+
+```bash
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m pip install -e .
