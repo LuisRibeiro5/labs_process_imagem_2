@@ -1,0 +1,87 @@
+{
+  "input": "images/output/cena_dificil_mask.png",
+  "connectivity": 8,
+  "min_area": 10,
+  "morphology": {
+    "sequence": [
+      "opening",
+      "closing"
+    ],
+    "kernel_shape": "ellipse",
+    "kernel_size": 3,
+    "open_iterations": 1,
+    "close_iterations": 1
+  },
+  "files": {
+    "initial": "results/cena_dificil_initial.png",
+    "opened": "results/cena_dificil_opened.png",
+    "final": "results/cena_dificil_final.png",
+    "initial_csv": "results/cena_dificil_initial.csv",
+    "final_csv": "results/cena_dificil_final.csv",
+    "labels": "results/cena_dificil_labels.png",
+    "summary": "results/cena_dificil_summary.json"
+  },
+  "connectivity_counts": {
+    "initial": {
+      "4": {
+        "count_raw": 299,
+        "count_filtered": 9,
+        "area_foreground_raw": 1951,
+        "area_components_filtered": 1450
+      },
+      "8": {
+        "count_raw": 121,
+        "count_filtered": 5,
+        "area_foreground_raw": 1951,
+        "area_components_filtered": 1716
+      }
+    },
+    "opened": {
+      "4": {
+        "count_raw": 28,
+        "count_filtered": 7,
+        "area_foreground_raw": 1061,
+        "area_components_filtered": 944
+      },
+      "8": {
+        "count_raw": 19,
+        "count_filtered": 3,
+        "area_foreground_raw": 1061,
+        "area_components_filtered": 969
+      }
+    },
+    "final": {
+      "4": {
+        "count_raw": 16,
+        "count_filtered": 3,
+        "area_foreground_raw": 1186,
+        "area_components_filtered": 1112
+      },
+      "8": {
+        "count_raw": 14,
+        "count_filtered": 3,
+        "area_foreground_raw": 1186,
+        "area_components_filtered": 1122
+      }
+    }
+  },
+  "initial": {
+    "count_raw": 121,
+    "count_filtered": 5,
+    "area_foreground_raw": 1951,
+    "area_components_filtered": 1716
+  },
+  "opened": {
+    "count_raw": 19,
+    "count_filtered": 3,
+    "area_foreground_raw": 1061,
+    "area_components_filtered": 969
+  },
+  "final": {
+    "count_raw": 14,
+    "count_filtered": 3,
+    "area_foreground_raw": 1186,
+    "area_components_filtered": 1122
+  },
+  "area_foreground_change": -765
+}

@@ -1,0 +1,87 @@
+{
+  "input": "images/output/cena_favoravel_mask.png",
+  "connectivity": 8,
+  "min_area": 10,
+  "morphology": {
+    "sequence": [
+      "opening",
+      "closing"
+    ],
+    "kernel_shape": "ellipse",
+    "kernel_size": 3,
+    "open_iterations": 1,
+    "close_iterations": 1
+  },
+  "files": {
+    "initial": "results/cena_favoravel_initial.png",
+    "opened": "results/cena_favoravel_opened.png",
+    "final": "results/cena_favoravel_final.png",
+    "initial_csv": "results/cena_favoravel_initial.csv",
+    "final_csv": "results/cena_favoravel_final.csv",
+    "labels": "results/cena_favoravel_labels.png",
+    "summary": "results/cena_favoravel_summary.json"
+  },
+  "connectivity_counts": {
+    "initial": {
+      "4": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1293,
+        "area_components_filtered": 1293
+      },
+      "8": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1293,
+        "area_components_filtered": 1293
+      }
+    },
+    "opened": {
+      "4": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1292,
+        "area_components_filtered": 1292
+      },
+      "8": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1292,
+        "area_components_filtered": 1292
+      }
+    },
+    "final": {
+      "4": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1293,
+        "area_components_filtered": 1293
+      },
+      "8": {
+        "count_raw": 1,
+        "count_filtered": 1,
+        "area_foreground_raw": 1293,
+        "area_components_filtered": 1293
+      }
+    }
+  },
+  "initial": {
+    "count_raw": 1,
+    "count_filtered": 1,
+    "area_foreground_raw": 1293,
+    "area_components_filtered": 1293
+  },
+  "opened": {
+    "count_raw": 1,
+    "count_filtered": 1,
+    "area_foreground_raw": 1292,
+    "area_components_filtered": 1292
+  },
+  "final": {
+    "count_raw": 1,
+    "count_filtered": 1,
+    "area_foreground_raw": 1293,
+    "area_components_filtered": 1293
+  },
+  "area_foreground_change": 0
+}
